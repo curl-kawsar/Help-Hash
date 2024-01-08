@@ -3,27 +3,86 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Load Tailwind CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet">
+        <!-- Load JavaScript for toggle functionality -->
+        <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
     </head>
-    <body class="font-sans bg-blue-500">
+    <body class="font-sans">
 
-        <nav class="bg-blue-500 p-6 m-6">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="text-white text-xl font-semibold">
-                    <a href="#">HelpHash</a>
-                </div>
+        <header class="container mx-auto w-fit">
+            <section>
+                <div class="bg-cover bg-center h-screen relative"
+                    style="background-image: url('img/bg-img/donation13.jpg');">
 
-                <div class="flex items-center space-x-8">
-                    <a href="#" class="text-white">Home</a>
-                    <a href="#" class="text-white">Events</a>
-                    <a href="#" class="text-white">Team Members</a>
-                    <a href="#" class="text-white">About Us</a>
-                    <button
-                        class="bg-white text-blue-500 px-4 py-2 rounded-full">Support
-                        Humanity</button>
+                    <!-- Overlay for navbar -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-full bg-gray-600 opacity-70"></div>
+
+                    <nav class="relative z-10 p-6">
+                        <div
+                            class="container mx-auto flex justify-between items-center">
+                            <div class="text-white text-xl font-semibold">
+                                <a href="#">HelpHash</a>
+                            </div>
+
+                            <div class="hidden md:flex items-center space-x-8">
+                                <!-- Hide on mobile (sm) screens -->
+                                <a href="#" class="text-white">Home</a>
+                                <a href="#" class="text-white">Events</a>
+                                <a href="#" class="text-white">Team Members</a>
+                                <a href="#" class="text-white">About Us</a>
+                                <button
+                                    class="bg-white text-blue-500 px-4 py-2 rounded-full">Support
+                                    Humanity</button>
+                            </div>
+
+                            <div class="md:hidden flex items-center">
+                                <!-- Show on mobile (sm) screens -->
+                                <button onclick="toggleMenu()"
+                                    class="text-white focus:outline-none">
+                                    <svg class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- Mobile menu -->
+                    <div id="mobile-menu"
+                        class="md:hidden hidden absolute top-0 left-0 w-full h-full bg-gray-600 opacity-70">
+                        <div
+                            class="container mx-auto flex flex-col justify-center items-center h-full">
+                            <a href="#" class="text-white my-4">Home</a>
+                            <a href="#" class="text-white my-4">Events</a>
+                            <a href="#" class="text-white my-4">Team Members</a>
+                            <a href="#" class="text-white my-4">About Us</a>
+                            <button
+                                class="bg-white text-blue-500 px-4 py-2 rounded-full my-4">Support
+                                Humanity</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </section>
+
+            <section>
+                
+            </section>
+
+        </header>
 
     </body>
 </html>
