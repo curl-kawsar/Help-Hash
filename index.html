@@ -7,6 +7,18 @@
         <link
             href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
             rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="style/style.css">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="...">
+
         <!-- Load JavaScript for toggle functionality -->
         <script>
         function toggleMenu() {
@@ -15,7 +27,7 @@
         }
     </script>
     </head>
-    <body class="font-sans">
+    <body class="font-Montserrat py-4">
 
         <header class="container mx-auto w-fit">
             <section>
@@ -40,8 +52,9 @@
                                 <a href="#" class="text-white">Team Members</a>
                                 <a href="#" class="text-white">About Us</a>
                                 <button
-                                    class="bg-white text-blue-500 px-4 py-2 rounded-full">Support
-                                    Humanity</button>
+                                    class="bg-white text-blue-500 px-4 py-2 rounded-full rounded-full my-4 transition duration-100 ease-in-out hover:bg-blue-500 hover:text-white hover:border-transparent"><a
+                                        href="https://forms.gle/your_form_id">Total
+                                        Fund</a></button>
                             </div>
 
                             <div class="md:hidden flex items-center">
@@ -60,6 +73,17 @@
                             </div>
                         </div>
                     </nav>
+                    <div
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex space-x-4">
+                        <a href="#events-section"
+                            class="bg-white text-blue-500 px-4 py-2 rounded-full my-4 transition duration-100 ease-in-out hover:bg-blue-500 hover:text-white hover:border-transparent">Our
+                            Projects</a>
+
+                        <button
+                            class="bg-white text-blue-500 px-4 py-2 rounded-full my-4 transition duration-100 ease-in-out hover:bg-blue-500 hover:text-white hover:border-transparent"><a
+                                href="https://forms.gle/your_form_id">Support
+                                Humanity</a></button>
+                    </div>
 
                     <!-- Mobile menu -->
                     <div id="mobile-menu"
@@ -67,22 +91,257 @@
                         <div
                             class="container mx-auto flex flex-col justify-center items-center h-full">
                             <a href="#" class="text-white my-4">Home</a>
-                            <a href="#" class="text-white my-4">Events</a>
-                            <a href="#" class="text-white my-4">Team Members</a>
-                            <a href="#" class="text-white my-4">About Us</a>
+                            <a href="#events-section"
+                                class="text-white my-4">Events</a>
+                            <a href="#team-members-section"
+                                class="text-white my-4">Team Members</a>
+                            <a href="#about-us-section"
+                                class="text-white my-4">About Us</a>
                             <button
-                                class="bg-white text-blue-500 px-4 py-2 rounded-full my-4">Support
-                                Humanity</button>
+                                class="bg-white text-blue-500 px-4 py-2 rounded-full my-4 transition duration-100 ease-in-out hover:bg-blue-500 hover:text-white hover:border-transparent">
+                                <a
+                                    href="https://docs.google.com/spreadsheets/d/your_sheet_id/edit"
+                                    target="_blank"
+                                    class="text-blue-500 hover:text-white">Total
+                                    Fund</a>
+                            </button>
                         </div>
                     </div>
                 </div>
             </section>
+            <section class="text-center py-8 px-6 md:px-20">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4"
+                    id="about-us-section">About Us</h1>
+                <p class="mb-8">
+                    Here you can add information about your organization, its
+                    mission, vision, and goals. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Vestibulum sagittis mauris nec
+                    enim fermentum, sed accumsan magna facilisis. Sed sit amet
+                    efficitur lectus. Aenean maximus odio vitae quam tincidunt,
+                    eu malesuada lacus efficitur.
+                </p>
 
-            <section>
-                
+                <!-- ... existing donation plan section ... -->
             </section>
 
-        </header>
+            <section class="text-center py-8 px-6 md:px-20">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Our Donation
+                    Plan</h1>
+                <p class="mb-8">
+                    We are currently planning to help people by providing food
+                    and medicine. A majority of the refugees suffer from food
+                    scarcity, and there's also a significant portion dealing
+                    with illnesses. To address these issues, we intend to
+                    distribute food and medicine, aiming to assist at least 1000
+                    people. Additionally, we plan to help by donating blood.
+                    Once the disaster subsides, we aim to distribute educational
+                    materials like pens, paper, and books.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+                    <div class="plan-box bg-white p-6 rounded-lg shadow-md">
+                        <img src="img/icon/food.png"
+                            alt="FOOD"
+                            class="w-16 mx-auto mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Food For A
+                            Family</h3>
+                        <p class="text-sm">In critical disaster times, people
+                            suffer a lot due to food scarcity. We plan to
+                            distribute essential dry food items to address this
+                            issue.</p>
+                    </div>
+                    <div class="plan-box bg-white p-6 rounded-lg shadow-md">
+                        <img src="img/icon/icon13.svg" alt="blood"
+                            class="w-16 mx-auto mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Blood For
+                            People</h3>
+                        <p class="text-sm">Blood is a crucial necessity in
+                            emergency situations. We aim to offer support by
+                            providing blood to those in need.</p>
+                    </div>
+                    <div class="plan-box bg-white p-6 rounded-lg shadow-md">
+                        <img src="img/icon/medicine.svg" alt="medicine"
+                            class="w-16 mx-auto mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Medicine For
+                            People</h3>
+                        <p class="text-sm">For individuals suffering from
+                            various illnesses, we aim to provide necessary
+                            medicines to alleviate their conditions.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="mt-10 border border-black rounded-3xl">
+                <h1
+                    id="events-section"
+                    class="text-3xl md:text-4xl font-bold mb-4 text-center py-8 px-6 md:px-20">Events
+                </h1>
 
-    </body>
-</html>
+                <div class="flex flex-col-reverse md:flex-row rounded-3xl">
+                    <div class="md:w-1/2 rounded-3xl">
+                        <img src="img/bg-img/donation8.jpg" alt="donate-first"
+                            class="w-full p-10 mb-5">
+                    </div>
+                    <div class="md:w-1/2  ">
+                        <div class="p-6 mt-5">
+                            <p>They have fallen into danger due to nature's
+                                fury, as a test of faith. To preserve humanity,
+                                we need to extend our help. Disasters arrive
+                                unannounced, and people are left helpless. Let's
+                                support them during their time of peril.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-10 flex flex-col-reverse md:flex-row-reverse rounded-3xl">
+                    <div class="md:w-1/2 rounded-3xl ">
+                        <img src="img/bg-img/donation2.jpg"
+                            class="p-10 mb-5"
+                            alt="donate-second" class="w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="p-6 mt-5">Humans are social beings. People
+                            cannot
+                            thrive in isolation. Since ancient times, we've
+                            shared a brotherhood with everyone. Let's step
+                            forward to aid them in their time of need. Their
+                            survival depends on our assistance. Together,
+                            humanity can bring about a positive change in the
+                            world Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Non quo fugit sit placeat
+                            temporibus possimus delectus reprehenderit corrupti
+                            assumenda laudantium, soluta sed ab rem, provident
+                            autem illo nostrum doloribus asperiores eaque fuga
+                            corporis vel optio. Autem, itaque necessitatibus?
+                            Sunt porro eos voluptas dicta inventore maxime ex, a
+                            velit dolores molestiae?</p>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="text-center py-8 px-6 md:px-20 mt-10 border border-black rounded-3xl"
+                id="next-event-section">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Next Event</h1>
+                <p class="mb-8">
+                    Details about your upcoming event go here. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Vestibulum sagittis
+                    mauris nec enim fermentum, sed accumsan magna facilisis. Sed
+                    sit amet efficitur lectus. Aenean maximus odio vitae quam
+                    tincidunt, eu malesuada lacus efficitur.
+                </p>
+                <div class="flex flex-col-reverse md:flex-row">
+                    <div class="md:w-1/2 ">
+                        <img src="img/bg-img/donation13.jpg"
+                            alt="Next Event Image 1" class="w-full ">
+                    </div>
+                    <!-- <div class="md:w-1/2">
+                        <img src="img/bg-img/donation8.jpg"
+                            alt="Next Event Image 2"
+                            class="w-full rounded-3xl mt-6 md:mt-0">
+                    </div>
+                </div> -->
+                </section>
+                <section class="mt-10">
+                    <h1
+                        class="text-3xl md:text-4xl font-bold mb-4 text-center py-8 px-6 md:px-20 "
+                        id="team-members-section">Team
+                        Members</h1>
+
+                    <section
+                        class="flex flex-wrap justify-center gap-4 md:gap-8">
+                        <!-- Card 1 -->
+                        <div
+                            class="max-w-xs sm:max-w-sm md:max-w-md rounded overflow-hidden shadow-lg">
+                            <img class="w-full" src="img/shamim.jpg"
+                                alt="Team Member 1">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Khaled
+                                    Shamim</div>
+                                <p class="text-gray-700 text-base">Here will be
+                                    a
+                                    short
+                                    introduction of Shamim 1</p>
+                                <p class="text-gray-500 text-base mt-2">Team
+                                    Member
+                                    Name
+                                    1</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="max-w-xs sm:max-w-sm md:max-w-md rounded overflow-hidden shadow-lg">
+                            <img class="w-full" src="img/kawsar.jps.jpg"
+                                alt="Team Member 2">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Md Kawsar
+                                    Ahmed</div>
+                                <p class="text-gray-700 text-base">Here will be
+                                    a
+                                    short
+                                    introduction of Kawsar 2</p>
+                                <p class="text-gray-500 text-base mt-2">Team
+                                    Member
+                                    Name
+                                    2</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div
+                            class="max-w-xs sm:max-w-sm md:max-w-md rounded overflow-hidden shadow-lg">
+                            <img class="w-full" src="img/rafio.jpg"
+                                alt="Team Member 3">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Mahtab
+                                    Rafio</div>
+                                <p class="text-gray-700 text-base">Here will be
+                                    a
+                                    short
+                                    introduction of Rafio</p>
+                                <p class="text-gray-500 text-base mt-2">Team
+                                    Member
+                                    Name
+                                    3</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+            </header>
+            <footer
+                class="bg-gray-900 mt-10 text-white py-4 text-center rounded-t-lg ">
+                <div class="flex justify-center items-center mb-4">
+                    <a href="https://www.facebook.com/python.kawsar"
+                        target="_blank"
+                        class="text-white mx-2">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/curl-kawsar/"
+                        target="_blank"
+                        class="text-white mx-2">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/curl-kawsar" target="_blank"
+                        class="text-white mx-2">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/+8801969078515" target="_blank"
+                        class="text-white mx-2">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <p>Designed and Developed by Kawsar Ahmed</p>
+            </footer>
+
+            <a href="#" id="scrollToTop"
+                class="fixed bottom-8 right-8 bg-blue-500 text-white px-4 py-2 rounded-full">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+
+            <script>
+            document.getElementById('scrollToTop').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        </script>
+        </body>
+    </html>
